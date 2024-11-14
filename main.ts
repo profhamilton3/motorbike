@@ -51,3 +51,5 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 wuKong.lightIntensity(75)
 basic.showIcon(IconNames.Happy)
 wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, 90)
+let sensor_pin = pins.digitalReadPin(DigitalPin.P8)
+let distance = 0
