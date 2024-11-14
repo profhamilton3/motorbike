@@ -18,7 +18,6 @@ function doPatternSwerve () {
     wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, 90)
     wuKong.setMotorSpeed(wuKong.MotorList.M1, -75)
     basic.pause(2000)
-    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerDown), music.PlaybackMode.InBackground)
     for (let index = 0; index <= 5; index++) {
         wuKong.setMotorSpeed(wuKong.MotorList.M1, -75 - index * -10)
     }
@@ -47,6 +46,7 @@ function doPatternSwerve2 () {
     wuKong.stopAllMotor()
 }
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerDown), music.PlaybackMode.InBackground)
     wuKong.stopAllMotor()
 })
 wuKong.lightIntensity(75)
